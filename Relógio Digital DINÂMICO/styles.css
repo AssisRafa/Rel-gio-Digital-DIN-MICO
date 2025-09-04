@@ -1,0 +1,96 @@
+/* Fonte importada do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+/* Reset básico + fonte padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Corpo da página */
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Degradê preto → laranja */
+    background: linear-gradient(135deg, #000000, #ff7f32);
+    color: #fff;
+}
+
+/* Container do relógio */
+.relogio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: 25px;
+    border-radius: 25px;
+}
+
+/* Cada bloco (horas, minutos, segundos) */
+.relogio div {
+    width: 120px;
+    height: 150px;
+    background: #1c1c1c; /* fundo escuro */
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* sombra 3D com brilho laranja */
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.7),
+                -3px -3px 10px rgba(255,127,50,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Animação ao passar o mouse */
+.relogio div:hover {
+    transform: translateY(-5px);
+    box-shadow: 8px 8px 20px rgba(0,0,0,0.8),
+                -4px -4px 15px rgba(255,127,50,0.4);
+}
+
+/* Números (horas, minutos, segundos) */
+.relogio span {
+    font-size: 55px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 8px rgba(255,255,255,0.3);
+}
+
+/* Texto pequeno (Horas, Minutos, Segundos) */
+.relogio span.tempo {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 8px;
+    color: #aaa;
+}
+
+/* Data estilizada */
+.data {
+    margin-top: 30px;
+    padding: 12px 25px;
+    background: rgba(28, 28, 28, 0.7); /* fundo transparente */
+    border-radius: 15px;
+    /* sombra com efeito neon laranja */
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.7),
+                -3px -3px 10px rgba(255,127,50,0.25);
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0px 0px 6px rgba(255,255,255,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Animação hover na data */
+.data:hover {
+    transform: translateY(-3px);
+    box-shadow: 8px 8px 20px rgba(0,0,0,0.8),
+                -4px -4px 15px rgba(255,127,50,0.4);
+}
